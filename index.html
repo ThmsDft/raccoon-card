@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raccoon - Car Detailing</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img src="./img/Raccoon-logo.svg" alt="Raccoon Logo" />
+        <ul>
+          <li><a href="index.html">Covering</a></li>
+          <li><a href="about.html">Vitres teintées</a></li>
+          <li><a href="services.html">Nettoyage</a></li>
+          <li><a href="contact.html">Accessoiring</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <p>Raccoon - Car Detailing</p>
+        <h1>Sublimez votre véhicule.</h1>
+        <button>Demander un devis</button>
+      </section>
+      <section class="features">
+        <h2>Chaque voiture mérite l'exception.</h2>
+        <p>
+          Chez nous, chaque véhicule est traité comme une pièce unique. Notre
+          expertise exigence, notre savoir-faire et notre passion transforment
+          l’ordinaire en remarquable. Redonnez à votre voiture l’attention
+          qu’elle mérite et bien plus encore.
+        </p>
+        <div class="container">
+          <div class="card">
+            <img src="./img/covering.png" alt="Covering" id="covering" />
+            <div>
+              <div class="texte">
+                <h3>Covering & PPF</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Maiores distinctio nostrum voluptatem necessitatibus
+                  exercitationem dicta itaque laboriosam porro pariatur.
+                </p>
+              </div>
+              <div class="action">
+                <p>Choisir la couleur</p>
+                <ul class="color-options">
+                  <li data-hue="0" style="background: red" class="active"></li>
+                  <li data-hue="90" style="background: green"></li>
+                  <li data-hue="220" style="background: blue"></li>
+                  <li data-hue="270" style="background: purple"></li>
+                  <li data-hue="330" style="background: pink"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              id="baseCar"
+              src="./img/Vitres.png"
+              alt="Voiture sans teinte"
+            />
+            <img
+              id="tintedCar"
+              src="./img/vitres-tinted.png"
+              alt="Voiture avec vitres teintées"
+            />
+
+            <div>
+              <div class="texte">
+                <h3>Vitres Teintées</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Maiores distinctio nostrum voluptatem necessitatibus
+                  exercitationem dicta itaque laboriosam porro pariatur.
+                </p>
+              </div>
+              <div class="action">
+                <p>Choisir la teinte</p>
+                <ul class="tint-options">
+                  <li
+                    data-opacity="0"
+                    style="background: rgb(255, 255, 255)"
+                  ></li>
+                  <li
+                    data-opacity="0.3"
+                    style="background: rgb(196, 196, 196)"
+                  ></li>
+                  <li
+                    data-opacity="0.5"
+                    style="background: rgb(126, 126, 126)"
+                  ></li>
+                  <li
+                    data-opacity="0.8"
+                    style="background: rgba(82, 82, 82, 0.7)"
+                  ></li>
+                  <li
+                    data-opacity="1"
+                    style="background: rgb(0, 0, 0)"
+                    class="active"
+                  ></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="before-after-container">
+              <img src="./img/propre.png" alt="Avant" class="before" />
+              <img
+                src="./img/sale.png"
+                alt="Après"
+                class="after"
+                id="afterImage"
+              />
+              <div class="slider-line" id="sliderLine"></div>
+            </div>
+            <div>
+              <div class="texte">
+                <h3>Nettoyage</h3>
+                <p>
+                  Redonnez à votre véhicule son éclat d’origine avec notre
+                  service de nettoyage professionnel.
+                </p>
+              </div>
+              <div class="action">
+                <p>Glissez le slider</p>
+                <input
+                  type="range"
+                  id="rangeSlider"
+                  min="0"
+                  max="100"
+                  value="70"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="./img/desert.png" alt="Accessoiring" id="Accessoiring" />
+            <div>
+              <div class="texte">
+                <h3>Accessoiring</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Maiores distinctio nostrum voluptatem necessitatibus
+                  exercitationem dicta itaque laboriosam porro pariatur.
+                </p>
+              </div>
+              <div class="action" >
+                <p>Choisir le thème</p>
+                <ul class="accessories-options">
+                  <li data-src="./img/desert.png" style="background:rgb(255, 187, 41)" class="active"></li>
+                  <li data-src="./img/montain.png" style="background:rgb(106, 255, 168)"></li>
+                  <li data-src="./img/snow.png" style="background:white" class="black"></li>
+                  <li data-src="./img/night.jpeg" style="background:black"></li>
+                  <li data-src="./img/jungle.png" style="background:green"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Raccoon - Car Detailing</p>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

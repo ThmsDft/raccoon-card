@@ -1,0 +1,415 @@
+:root {
+  --primary-color: #00a3ff;
+  --secondary-color: #8a4fff;
+  --background-color: #111827;
+  --card-background: #1e1e1e;
+  --text-color: #ffffff;
+  --text-muted: #a0a0a0;
+  --text-light: #83d5ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  z-index: 100;
+  height: 60px;
+  margin-inline: 20px;
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+nav.scrolled {
+  background-color: rgba(100, 131, 163, 0.075);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  margin-top: 15px;
+}
+
+nav img {
+  height: 65%;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+}
+
+/* Main */
+
+main {
+  margin-top: 60px;
+  margin-inline: auto;
+  width: 100%;
+  max-width: 1400px;
+  padding-inline: 20px;
+}
+
+/* Hero */
+
+section.hero {
+  margin-inline: auto;
+  padding: 50px;
+  width: 100%;
+  height: 800px;
+  border-radius: 30px;
+  background-image: url("img/Raccoon-forest-1.avif");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+section.hero h1 {
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+section.hero p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #babace;
+}
+
+section.hero button {
+  background-color: transparent;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+section.hero button:hover {
+  background-color: rgba(255, 255, 255, 0.199);
+}
+
+/* Cards */
+
+section.features {
+  margin-top: 60px;
+  width: 100%;
+}
+
+section.features h2 {
+  text-align: center;
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+section.features h2 + p {
+  width: 600px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #babace;
+  margin-bottom: 20px;
+  margin-inline: auto;
+}
+
+section.features .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  padding: 1rem;
+}
+
+.card {
+  position: relative;
+  background-color: #1f2937;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  height: auto;
+}
+
+.card > img {
+  width: 100%;
+  min-height: 300px;
+  max-height: 300px;
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+}
+
+.card > div {
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.card > div div.texte {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card > div div.texte h3 {
+  width: 100%;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.card > div div.texte p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #b1abc3;
+}
+
+.card > div div.action {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card > div div.action p {
+  font-size: 12px;
+}
+.card > div div.action ul {
+  display: flex;
+  gap: 20px;
+}
+
+.card > div div.action ul li {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  border: solid 2px transparent;
+}
+
+.card > div div.action ul li.active {
+  border: solid 2px white;
+}
+
+.card > div div.action ul li.active.black {
+  border: solid 2px black;
+}
+
+input[range] {
+  width: 20px;
+}
+
+section.features .container::-webkit-scrollbar {
+  display: none; /* cacher la scrollbar */
+}
+
+@media (max-width: 850px) {
+  section.features .container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    gap: 25px;
+    padding: 1rem;
+  }
+
+  .card {
+    flex: 0 0 400px;
+    background-color: #1f2937;
+    border-radius: 20px;
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  }
+
+  .card img {
+    width: 100%;
+    height: 250px;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+  }
+
+  .card > div {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+  }
+}
+
+footer {
+  margin-top: 100px;
+}
+
+.before-after-container {
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+
+.before-after-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.before {
+  z-index: 1;
+}
+
+.after {
+  z-index: 2;
+  clip-path: inset(0 50% 0 0); /* masque initial : moitié visible */
+  transition: clip-path 0.05s ease;
+}
+
+.slider-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: white;
+  z-index: 3;
+  pointer-events: none;
+  transition: left 0.05s ease;
+}
+
+#rangeSlider {
+  width: 100%;
+}
+
+img#tintedCar {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+/* Input Range */
+
+input[type=range] {
+  -webkit-appearance: none; /* Supprimer le style par défaut */
+  width: 100%;
+  height: 4px;
+  background: #ddd;
+  border-radius: 10px;
+  outline: none;
+  margin: 12px 0;
+}
+
+/* WebKit (Chrome, Safari, Edge Chromium) */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  margin-top: -7px; /* Aligne le thumb au centre de la track */
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 4px;
+  background: var(--primary-color);
+  border-radius: 10px;
+}
+
+/* Firefox */
+input[type=range]::-moz-range-thumb {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+input[type=range]::-moz-range-track {
+  height: 4px;
+  background: var(--primary-color);
+  border-radius: 10px;
+}
+
+/* IE and Edge (legacy) */
+input[type=range]::-ms-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #111827;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+  height: 4px;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #3b82f6;
+  border-radius: 10px;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #ddd;
+  border-radius: 10px;
+}
