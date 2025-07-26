@@ -99,6 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Card Nettoyage
 document.addEventListener("DOMContentLoaded", () => {
   const range = document.getElementById("rangeSlider");
   const after = document.getElementById("afterImage");
@@ -114,6 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
   updateSlider(); // Initial update
 });
 
+// Card Covering
 document.addEventListener("DOMContentLoaded", () => {
   const coveringCar = document.getElementById("covering");
   const colorOptions = document.querySelectorAll(".color-options li");
@@ -128,6 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Card Vitres Teintées
 document.addEventListener("DOMContentLoaded", () => {
   const tintedCar = document.getElementById("tintedCar");
   const tintOptions = document.querySelectorAll(".tint-options li");
@@ -142,6 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Card Accessoires
 document.addEventListener("DOMContentLoaded", () => {
   const accessoriesOptions = document.querySelectorAll("ul.accessories-options li");
 
